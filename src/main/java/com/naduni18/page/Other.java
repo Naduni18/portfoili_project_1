@@ -1,6 +1,7 @@
 package com.naduni18.page;
 
 import com.naduni18.core.Base;
+import com.naduni18.core.ConfigFileReader;
 import com.naduni18.core.ExcelDataProvider;
 import com.naduni18.core.SoftAssertion;
 import org.openqa.selenium.By;
@@ -23,9 +24,10 @@ public class Other extends Base {
     }
 
     public static void browser_is_open_and_load_the_url() {
+      ConfigFileReader configFileReader = new ConfigFileReader();
       Base base = new Base();
       base.initializeDriver();
-      driver.get("https://formy-project.herokuapp.com/");
+      driver.get(configFileReader.readProperty("base_url"));
     }
 
     public static void user_wait_for_seconds(String string) throws InterruptedException {
