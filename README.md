@@ -38,7 +38,8 @@ Give credit here.
 ## Contact
 Created by [Naduni18] - feel free to contact me!
 
-
+##License
+This project is open source and available under the MIT License
 <!-- Optional -->
 <!-- ## License -->
 <!-- This project is open source and available under the [... License](). -->
