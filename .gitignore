@@ -38,7 +38,7 @@ build/
 .DS_Store
 
 ###logs###
-.logs/**
+.logs/*
 
 ###chrome driver###
 .drivers/chromedriver.exe
