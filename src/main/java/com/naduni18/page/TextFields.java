@@ -6,13 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class TextFields extends Base {
-    public static void user_enter_text_into_textfield(String string) {
+    public static void user_enter_text_into_textfield(String string) throws IOException {
+        try{
         String locator_ = locatormap.get(string);
         String value_ = valuemap.get(string);
 
@@ -22,5 +24,10 @@ public class TextFields extends Base {
         text_box.clear();
         text_box.sendKeys("");
         text_box.sendKeys(value_);
+        }catch (Exception e){
+            log.error(e);
+
+            getScreenShotPath(driver);
+        }
     }
 }

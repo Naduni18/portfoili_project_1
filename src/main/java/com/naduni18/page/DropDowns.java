@@ -7,14 +7,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class DropDowns extends Base {
-    public static void user_select_value_in_dropfown(String string) {
+    public static void user_select_value_in_dropfown(String string) throws IOException {
 
+        try{
         String locator_ = locatormap.get(string);
         String value_ = valuemap.get(string);
 
@@ -22,5 +24,10 @@ public class DropDowns extends Base {
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(locator_)));
         Select dropdown = new Select(selectbox);
         dropdown.selectByVisibleText(value_);
+        }catch (Exception e){
+            log.error(e);
+
+            getScreenShotPath(driver);
+        }
     }
 }
