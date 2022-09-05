@@ -14,6 +14,7 @@ import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class DropDowns extends Base {
+    //user selects value from static dropdown
     public static void user_select_value_in_dropfown(String string) throws IOException {
 
         try{

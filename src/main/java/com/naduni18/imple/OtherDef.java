@@ -36,7 +36,6 @@ public class OtherDef {
 
     }
 
-    //close web browser and quit driver
     @Then("close browser")
     public void closeBrowser() throws IOException {
         Other.close_browser();

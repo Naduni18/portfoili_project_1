@@ -13,6 +13,7 @@ import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class TextFields extends Base {
+    //user eneter text in to text field
     public static void user_enter_text_into_textfield(String string) throws IOException {
         try{
         String locator_ = locatormap.get(string);

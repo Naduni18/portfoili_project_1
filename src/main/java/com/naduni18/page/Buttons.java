@@ -14,6 +14,7 @@ import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class Buttons extends Base {
+    //user click on static button,link,radio button or checkbox
     public static void user_click_on_button_in_page(String string) throws IOException {
         try {
             String locator_ = locatormap.get(string);
@@ -28,6 +29,7 @@ public class Buttons extends Base {
         }
 
     }
+    //user click on dynamic button,link,radio button or checkbox
     public static void user_click_on_dynamic_button_in_page(String string) throws IOException {
         try{
         String locator_ = locatormap.get(string);
@@ -47,6 +49,7 @@ public class Buttons extends Base {
         }
     }
 
+    //user click on javascript element
     public static void user_click_on_js_element_in_page(String string) throws IOException {
         try {
         String locator_ = locatormap.get(string);

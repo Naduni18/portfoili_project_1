@@ -19,6 +19,7 @@ import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class Other extends Base {
 
+    //user read all data from excel sheet and store them in a hashmap
     public static void user_read_all_data_from_excelSheet(String sheetname){
         try{
         ExcelDataProvider ep = new ExcelDataProvider();
@@ -29,6 +30,7 @@ public class Other extends Base {
         }
     }
 
+    //user open given url
     public static void browser_is_open_and_load_the_url(String string) throws IOException {
       try {
           ConfigFileReader configFileReader = new ConfigFileReader();
@@ -42,7 +44,7 @@ public class Other extends Base {
           getScreenShotPath(driver);
       }
     }
-
+    //user wait for given number of seconds
     public static void user_wait_for_seconds(String string) throws IOException {
         try {
         Integer intval = Integer.parseInt(string)*1000;
@@ -55,6 +57,7 @@ public class Other extends Base {
         }
     }
 
+    //user hover over an element
     public static void user_hover_into_page(String element) throws IOException {
         try{
         String locator_ = locatormap.get(element);
@@ -72,7 +75,7 @@ public class Other extends Base {
             getScreenShotPath(driver);
         }
     }
-
+//user verify text on page
     public static void user_check_for_element_text_in_page(String string) throws IOException {
         try {
         String locator_ = locatormap.get(string);
@@ -88,7 +91,7 @@ public class Other extends Base {
         }
 
     }
-
+//close the browser and quit webdriver
     public static void close_browser() throws IOException {
         try{
         driver.close();
