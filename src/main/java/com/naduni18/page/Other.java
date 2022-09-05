@@ -24,16 +24,18 @@ public class Other extends Base {
         ep.getSheetValueData(sheetname);
     }
 
-    public static void browser_is_open_and_load_the_url() {
+    public static void browser_is_open_and_load_the_url(String string) {
       ConfigFileReader configFileReader = new ConfigFileReader();
       Base base = new Base();
       base.initializeDriver();
-      driver.get(configFileReader.readProperty("base_url"));
+      driver.get(configFileReader.readProperty(string));
+      log.info("browaer is open and load url");
     }
 
     public static void user_wait_for_seconds(String string) throws InterruptedException {
         Integer intval = Integer.parseInt(string)*1000;
         Thread.sleep(intval);
+        log.info("user wait for "+string+" seconds");
     }
 
     public static void user_hover_into_page(String element) {
@@ -45,14 +47,16 @@ public class Other extends Base {
 
 //Performing the mouse hover action on the target element.
         action.moveToElement(ele).perform();
+        log.info("user hover on element "+element);
     }
 
-    public static void user_check_for_element_in_page(String string) {
+    public static void user_check_for_element_text_in_page(String string) {
         String locator_ = locatormap.get(string);
         String value_ = valuemap.get(string);
         WebElement ptag = driver.findElement(By.xpath(locator_));
         SoftAssert softassert = SoftAssertion.get();
         softassert.assertEquals(value_,ptag.getText());
+        log.info("user verify element "+string+"for text "+value_);
 
     }
 

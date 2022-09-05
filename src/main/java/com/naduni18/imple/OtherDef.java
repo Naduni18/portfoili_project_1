@@ -12,10 +12,10 @@ public class OtherDef {
         // Write code here that turns the phrase above into concrete actions
         Other.user_read_all_data_from_excelSheet(string);
     }
-    @Given("browser is open and load url")
-    public void browser_is_open_and_load_url() {
+    @Given("browser is open and load url for {string}")
+    public void browser_is_open_and_load_url(String string) {
         // Write code here that turns the phrase above into concrete actions
-        Other.browser_is_open_and_load_the_url();
+        Other.browser_is_open_and_load_the_url(string);
     }
 
 
@@ -29,9 +29,9 @@ public class OtherDef {
         Other.user_hover_into_page(element);
     }
 
-    @Then("user check for {string} in page")
+    @Then("user check element text in {string} in page")
     public void userCheckForInPage(String string) {
-        Other.user_check_for_element_in_page(string);
+        Other.user_check_for_element_text_in_page(string);
 
     }
 
