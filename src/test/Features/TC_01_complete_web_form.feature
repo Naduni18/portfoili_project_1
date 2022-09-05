@@ -4,11 +4,11 @@
 
 @TCIP-Automation
 Feature: TC_01Complete Web Form
-  Scenario: TC_001Complete Web Form
+  Scenario: TC_01Complete Web Form
 
-    Given user read data from excelsheet "TC_002"
+    Given user read data from excelsheet "TC_01"
 
-  ##Login to LGIM User
+  ##Fill web form
     Given browser is open and load url
     When user click on "lnk_complete_web_form" in page
     When user enter "txt_first_name" into textfield
@@ -19,3 +19,6 @@ Feature: TC_01Complete Web Form
     When user select value in "drp_years_of_experience" dropdown in page
     Then user enter "date_picker_date" into textfield
     Then user click on "btn_submit" in page
+    Then user wait for "5" seconds
+    Then user check for "p_success" in page
+    Then close browser

@@ -1,8 +1,44 @@
 package com.naduni18.page;
 
 import com.naduni18.core.Base;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static com.naduni18.core.ExcelDataProvider.locatormap;
+import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class Buttons extends Base {
     public static void user_click_on_button_in_page(String string) {
+      String locator_ = locatormap.get(string);
+
+        WebElement button = (new WebDriverWait(driver, Duration.ofSeconds(120)))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(locator_)));
+        button.click();
+
+    }
+    public static void user_click_on_dynamic_button_in_page(String string){
+        String locator_ = locatormap.get(string);
+        String value_ = valuemap.get(string);
+
+        String locator_with_attribute = locator_.replace("attribute_val",value_);
+
+        WebElement button = (new WebDriverWait(driver, Duration.ofSeconds(120)))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(locator_with_attribute)));
+
+        button.click();
+
+    }
+
+    public static void user_click_on_js_element_in_page(String string) {
+        String locator_ = locatormap.get(string);
+
+        WebElement button = driver.findElement(By.xpath(locator_));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", button);
     }
 }

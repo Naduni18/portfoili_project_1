@@ -1,5 +1,6 @@
 package com.naduni18.test.runner;
 
+import com.naduni18.core.SoftAssertion;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
@@ -38,6 +39,8 @@ public class TestNGRunner{
 
     @AfterClass(alwaysRun = true)
     public void tearDownClass() throws Throwable {
+        SoftAssertion.assertAll();
         testNGCucumberRunner.finish();
+
     }
 }
