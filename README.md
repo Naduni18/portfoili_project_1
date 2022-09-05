@@ -31,7 +31,7 @@ Project is:  _complete_
 
 ## Acknowledgements
 Give credit here.
-- This project was based on [https://www.lambdatest.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/)]
+- This project was based on [https://www.lambdatest.com/support/docs/running-cucumber-scripts-with-testng-and-selenium/]
 
 
 
@@ -39,4 +39,4 @@ Give credit here.
 Created by [Naduni18] - feel free to contact me!
 
 ## License
-This project is open source and available under the MIT License[https://github.com/Naduni18/portfoili_project_1/blob/main/License.md]
+This project is open source and available under the MIT License.
