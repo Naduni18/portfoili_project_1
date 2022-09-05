@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+###logs###
+.logs
+
+###chrome driver###
+.drivers/chromedriver.exe
