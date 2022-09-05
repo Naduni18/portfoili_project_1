@@ -17,6 +17,7 @@ import static com.naduni18.core.ExcelDataProvider.locatormap;
 import static com.naduni18.core.ExcelDataProvider.valuemap;
 
 public class Other extends Base {
+
     public static void user_read_all_data_from_excelSheet(String sheetname) throws Exception {
         ExcelDataProvider ep = new ExcelDataProvider();
         ep.getSheetLocatorData(sheetname);
@@ -58,5 +59,6 @@ public class Other extends Base {
     public static void close_browser() {
         driver.close();
         driver.quit();
+        log.info("browser closed");
     }
 }
