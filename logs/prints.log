@@ -1,0 +1,5 @@
+06:48:52.411 [main] INFO  com.naduni18.core.Base - user wait for 5 seconds
+06:48:59.627 [main] INFO  com.naduni18.core.Base - user wait for 5 seconds
+06:49:06.225 [main] INFO  com.naduni18.core.Base - user wait for 5 seconds
+06:49:10.032 [main] INFO  com.naduni18.core.Base - user verify element txt_confirmfor text 
+06:49:10.752 [main] INFO  com.naduni18.core.Base - browser closed
