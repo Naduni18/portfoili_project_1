@@ -26,6 +26,7 @@ public class Buttons extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
 
     }
@@ -46,6 +47,7 @@ public class Buttons extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 
@@ -61,6 +63,7 @@ public class Buttons extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 }

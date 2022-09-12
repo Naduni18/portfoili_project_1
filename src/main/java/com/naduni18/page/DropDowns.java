@@ -29,6 +29,7 @@ public class DropDowns extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 }

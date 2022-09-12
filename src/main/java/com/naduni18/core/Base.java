@@ -40,7 +40,7 @@ public class Base {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm:ss a");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy-h-mm-ss-a");
         String filename = sdf.format(date);
         String destinationfile = currentDirectory + "\\src\\test\\ScreenShots\\" + filename + ".png";
         FileUtils.copyFile(source, new File(destinationfile));

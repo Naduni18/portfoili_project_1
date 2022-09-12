@@ -27,6 +27,7 @@ public class Other extends Base {
         ep.getSheetValueData(sheetname);
         }catch (Exception e){
             log.error(e);
+            throw new AssertionError(e.getMessage());
         }
     }
 
@@ -42,6 +43,7 @@ public class Other extends Base {
           log.error(e);
 
           getScreenShotPath(driver);
+          throw new AssertionError(e.getMessage());
       }
     }
     //user wait for given number of seconds
@@ -54,6 +56,7 @@ public class Other extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 
@@ -73,6 +76,7 @@ public class Other extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 //user verify text on page
@@ -88,6 +92,7 @@ public class Other extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
 
     }
@@ -101,6 +106,7 @@ public class Other extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 }

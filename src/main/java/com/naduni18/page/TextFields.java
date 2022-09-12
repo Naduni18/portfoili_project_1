@@ -29,6 +29,7 @@ public class TextFields extends Base {
             log.error(e);
 
             getScreenShotPath(driver);
+            throw new AssertionError(e.getMessage());
         }
     }
 }

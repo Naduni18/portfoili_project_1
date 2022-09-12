@@ -1,0 +1,6 @@
+07:38:58.765 [main] INFO  com.naduni18.core.Base - browaer is open and load url
+07:39:05.838 [main] INFO  com.naduni18.core.Base - user wait for 5 seconds
+07:39:05.914 [main] INFO  com.naduni18.core.Base - user verify element p_successfor text The form was successfully submitted!
+07:39:09.736 [main] INFO  com.naduni18.core.Base - browser closed
+07:39:09.802 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+07:39:09.805 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
