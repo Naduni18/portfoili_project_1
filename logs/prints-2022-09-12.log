@@ -1,6 +1,5 @@
-07:38:58.765 [main] INFO  com.naduni18.core.Base - browaer is open and load url
-07:39:05.838 [main] INFO  com.naduni18.core.Base - user wait for 5 seconds
-07:39:05.914 [main] INFO  com.naduni18.core.Base - user verify element p_successfor text The form was successfully submitted!
-07:39:09.736 [main] INFO  com.naduni18.core.Base - browser closed
-07:39:09.802 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-07:39:09.805 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+10:02:04.240 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+10:02:04.242 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+10:02:04.242 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+10:02:05.190 [AsyncHttpClient-1-2] DEBUG io.netty.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+10:02:05.401 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xff256607fe161c85

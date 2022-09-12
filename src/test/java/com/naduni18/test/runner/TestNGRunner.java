@@ -1,5 +1,8 @@
 package com.naduni18.test.runner;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.naduni18.core.SoftAssertion;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
@@ -18,11 +21,13 @@ import org.testng.annotations.Test;
         "rerun:target/cucumber-reports/rerun.txt", })
 public class TestNGRunner{
     private TestNGCucumberRunner testNGCucumberRunner;
+    ExtentReports extent;
 
     @BeforeClass(alwaysRun = true)
     public void setUpCucumber() {
 
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+        extent = new ExtentReports();
 
 
     }
@@ -30,6 +35,10 @@ public class TestNGRunner{
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "scenarios")
     public void scenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
+        ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
+        extent.attachReporter(spark);
+        extent.createTest("Test")
+                .log(Status.INFO, "Test started");
     }
 
     @DataProvider
@@ -40,6 +49,7 @@ public class TestNGRunner{
     @AfterClass(alwaysRun = true)
     public void tearDownClass() throws Throwable {
         SoftAssertion.assertAll();
+        extent.flush();
         testNGCucumberRunner.finish();
 
     }
