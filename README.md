@@ -17,7 +17,6 @@
 ## Technologies Used
 - Selenium - version 4.4.0
 - Cucumber - version 2.0
-- TestNG- version 7.6.1
 - Log4j-version 2.18.0
 - Java version 17
 
